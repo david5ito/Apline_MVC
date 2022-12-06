@@ -1,0 +1,29 @@
+
+    <!--Ejemplo en una hoja HTMl, nota:Ejecutar el archivo en el LiveServer-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Referencia a Alpine-->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+</head>
+<body>
+    
+    <div x-data="{titulo: 'Los cruds son inevitables'}">
+        <div x-text="titulo"></div>
+
+        <input type="text" x-model="titulo">
+
+        <button x-on:click="titulo = 'Hola, soy tu CRUD'">Hola</button>
+
+        <template x-if="titulo == 'crud'">
+            <div>SUSCRIBETE</div>
+        </template>
+    </div>
+
+</body>
+</html>
